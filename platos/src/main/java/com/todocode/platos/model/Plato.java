@@ -1,8 +1,6 @@
 package com.todocode.platos.model;
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,12 +12,12 @@ import java.util.List;
 @Entity
 public class Plato {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long numero_plato;
     private String nombre;
     private Double precio;
     private String descripcion;
-    @ElementCollection
-    private List<String> ingredientes;
-
+    @ElementCollection(fetch = FetchType.EAGER )
+    private List<String> listaIngredientes;
 }
 
