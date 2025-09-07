@@ -11,7 +11,7 @@ public interface IPlatoService {
 
     public void deletePlato(Long id);
 
-    public Plato findPlato(Long id);
+    public Plato findPlato(String nombre);
 
     public void editPlato(Long id, Plato plato);
 

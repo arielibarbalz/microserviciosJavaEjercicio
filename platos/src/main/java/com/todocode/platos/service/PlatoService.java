@@ -28,7 +28,7 @@ public class PlatoService implements IPlatoService{
     }
 
     @Override
-    public Plato findPlato(Long id) {
+    public Plato findPlato(String nombre) {
         return null;
     }
 
